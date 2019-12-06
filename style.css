@@ -1,0 +1,452 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CUSTOM CSS */
+body{
+    background:#F3F3F3;
+    text-align:center;
+}
+
+nav{
+    padding-left:2vw;
+    padding-top:2vw;
+}
+main{
+    margin:3vw;
+    padding-top:3vw;
+}
+/* typography */
+h1{
+    font-family: neue-haas-grotesk-display,sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size:4.2vw;
+    line-height:1.5;
+}
+
+h2{
+    font-family: neue-haas-grotesk-display,sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size:1.5vw;
+    line-height:1.5;
+    margin-bottom:1vw;
+}
+
+
+h3{
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size:1.2vw;
+    line-height:1.5;
+}
+
+h4{
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size:1.2vw;
+    line-height:1.5;
+}
+
+p,form{
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size:1.2em;
+    line-height:1.5;
+}
+
+label{
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size:1em;
+    line-height:1.5;
+    text-align:left;
+}
+a, button{
+    font-family: neue-haas-grotesk-display,sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size:1.2em;
+    line-height:1.5;
+    color:white;
+    text-decoration:none;
+}
+
+a:link {
+    text-decoration: none;
+  }
+  
+a:visited {
+    text-decoration: none;
+  }
+  
+a:hover {
+    text-decoration: none;
+    color:white;
+  }
+  
+a:active {
+    text-decoration: none;
+  }
+
+nav h3{
+    text-align:left;
+}
+
+.button_active{
+    display:inline-block;
+    background-color:#4A90E2;
+    color:white;
+    padding: 16px 60px;
+    margin-top:50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 20px 2px;
+    cursor: pointer;
+    border-radius: 24px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+}
+
+.button_active:hover{
+    box-shadow:none;
+}
+
+.button_inactive{
+    background-color:#9B9B9B;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+/* splash */
+
+.splashImg{
+    width: 100%;
+    height:auto;
+    padding-top: 100px;
+}
+
+.fullbleed{
+    margin:0;
+    padding:0;
+}
+
+.marquee{
+    overflow: hidden;
+    white-space: nowrap;
+}
+#marquee1 {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+  }
+  
+#marquee2 {
+    display: inline-block;
+    animation: marquee2 20s linear infinite;
+    animation-delay: 10s;
+  }
+
+  .fullbleed h1{
+    margin:10vh 20vw;
+}
+
+@keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+@keyframes marquee2 {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-200%);
+    }
+  }
+
+/* select */
+.assets{
+    display:flex;
+    text-align:center;
+    flex-wrap:wrap;
+    
+}
+
+.asset{
+    margin:1vw;
+    padding:2.5vw 1vw;
+    background-color:white;
+    border-radius:20px;
+    cursor:pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* .asset:hover{
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.08);
+
+} */
+.asset img{
+    width:70%;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.selected{
+    box-shadow:0px 0px 0px 3px #4A90E2 inset;
+}
+
+label{
+    cursor:pointer;
+}
+
+form{
+    margin-bottom:5vh;
+}
+/* legacy contact */
+
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+    background-color:#9b9b9b;
+  }
+
+#legacyContainer{
+    flex-wrap:nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 30px 0;
+}
+.legacyCard{
+    width:33vw;
+    padding: 6vw;
+    margin-left:3vw;
+    border-radius:30px;
+    border:none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    text-align:left;
+}
+
+::placeholder, select, .btn{
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size:1vw;
+    line-height:1.5;
+    text-align:left;
+}
+
+.btn{
+    font-weight: 400;
+    text-align:center;
+}
+
+.clickable{
+    cursor: pointer;
+    text-align:center;
+    font-size:8vw;
+    color:#d8d8d8;
+    justify-content: center;
+}
+
+/* dashboard */
+
+nav a{
+    color:black;
+    text-align:left;
+}
+
+svg{
+    fill: #9B9B9B;
+}
+
+.nav-item a:hover{
+    color: #9b9b9b;
+}
+
+.title:hover{
+    color:black;
+}
+
+.title{
+    font-size: 1.4em;
+}
+ul{
+    margin-top:5vh;
+}
+.sidebar-sticky{
+    top: 0;
+    height: 100vh;
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.right{
+    padding:20px;
+    padding-top:5vh;
+}
+.selectedAsset{
+    display:flex;
+    border-radius:1em;
+    border:none;
+    background:white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    padding:1em 3em;
+    align-items:center;
+    margin-top:2em;
+
+}
+
+.selectedAsset img{
+    width:30%;
+    margin-right:10%
+}
+
+/* individual asset pages */
+
+.planContainer{
+    display:flex;
+}
+
+#actions, #contacts{
+    border-radius:1em;
+    border:none;
+    background:white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    padding:1em 3em;
+    margin-left:2vh;
+}
+
+.planContainer label{
+    margin: 2vh 0;
+    border: 1px black solid;
+    border-radius:20px;
+    padding:20px;
+    width: 30vw;
+
+}
+
+input[type="radio"]{
+    visibility:hidden;
+}
+
+input[type="radio"]:checked+ label{
+    background:#4A90E2;
+    color:white;
+    border: 1px white solid;
+}
+
+label{
+    text-align:center;
+}
+
+.asset a{
+    padding-top:10px;
+    color:black;
+    font-size: 15px;
+}
+
+.hidden{
+    display:none;
+}
+
+.backBtn{
+    display:inline-block;
+    margin-left:0;
+    color:black;
+    text-align:left;
+    margin:2em 2em;
+    margin-top:5vh;
+}
+
+.backBtn:hover{
+    color:#9b9b9b;
+}
+
+
+/* result */
+#result{
+    padding:5em;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-row-gap: 20px;
+}
+
+#result p, #result h4{
+    text-align:left;
+}
+
+#result h3{
+    grid-column-start:1;
+    grid-column-end:6;
+}
+
+#result h4{
+    grid-column-start:1;
+    grid-column-end:2;
+}
+
+#result p{
+    grid-column-start:2;
+    grid-column-end:5;
+}
