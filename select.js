@@ -491,12 +491,22 @@ function parseResult(){
     //show on DOM
     var parentDiv = document.getElementById("result");
     var contacts = JSON.parse(localStorage.getItem("legacyContacts"));
+    console.log(contacts);
     for (var j=0; j<contacts.length;j++){
         var legacyInfo = document.createElement("div");
         parentDiv.appendChild(legacyInfo);
-        var name = document.createElement("h4");
-        name.innerHtml = "Name: "+ contacts[j][0] + contacts[j][1];
-  
+        var nameTitle = document.createElement("h4");
+        nameTitle.innerHTML = "Primary Contact" 
+        var name = document.createElement("p");
+        name.innerHTML = contacts[j][0] + contacts[j][1];
+        var email = document.createElement("p");
+        email.innerHTML = contacts[j][3];
+        var tel = document.createElement("p");
+        tel.innerHTML = contacts[j][4];
+        legacyInfo.appendChild(nameTitle);
+        legacyInfo.appendChild(name);
+        legacyInfo.appendChild(email);
+        legacyInfo.appendChild(tel);
     }
 
     for (var i = 0, len = assets.length; i < len; i++) {
@@ -521,6 +531,7 @@ function parseResult(){
             youtubeAsset.innerHTML="YouTube";
             parentDiv.appendChild(youtubeAsset);
             var youtubePlan = JSON.parse(localStorage.getItem("youtubePlan"));
+            console.log(youtubePlan)
             var youtubeContact = JSON.parse(localStorage.getItem("youtubeContact"));
             
             var youtubePlanDom = document.createElement("p");
