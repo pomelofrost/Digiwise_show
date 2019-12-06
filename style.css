@@ -307,6 +307,9 @@ a.disabled {
     justify-content: center;
 }
 
+.form-control{
+    font-size:1em;
+}
 /* dashboard */
 
 nav a{
